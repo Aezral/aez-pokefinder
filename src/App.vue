@@ -1,6 +1,6 @@
 <template>
-	<div class="page d-flex flex-column justify-content-center align-items-center">
-		<div class="main">
+	<div class="page">
+		<div class="main mx-auto mt-5">
 			<form @submit.prevent="buscar()">
 				<div class="d-inline-flex flex-row align-items-baseline">
 					<MDBInput label="Pokemón a buscar" v-model="search" autofocus />
@@ -216,6 +216,10 @@ body {
 	background: rgb(228, 228, 228);
 }
 
+body::-webkit-scrollbar{
+	display:none;
+}
+
 .page {
 	height: 100vh;
 }
@@ -223,25 +227,17 @@ body {
 .main {
 	background: white;
 	border-radius: 15px;
-	max-height: 100%;
 	padding: 50px 20px 50px 20px;
 	max-width: 90vw;
 }
 
 @media (min-width: 700px) {
 	.main {
-		max-width: 800px;
+		max-width: 600px;
 		padding: 50px;
 	}
 }
-@media(min-height:700px){
-	.pokemon{
-		max-height:none;
-	}
-	.main{
-		max-height: none;
-	}
-}
+
 
 .header {
 	max-width: 600px;
