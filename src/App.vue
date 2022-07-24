@@ -223,14 +223,23 @@ body {
 .main {
 	background: white;
 	border-radius: 15px;
-
+	max-height: 100%;
 	padding: 50px 20px 50px 20px;
 	max-width: 90vw;
 }
 
-@media (min-width: 700) {
+@media (min-width: 700px) {
 	.main {
 		max-width: 800px;
+		padding: 50px;
+	}
+}
+@media(min-height:700px){
+	.pokemon{
+		max-height:none;
+	}
+	.main{
+		max-height: none;
 	}
 }
 
@@ -250,6 +259,7 @@ body {
 .pokemon {
 	background: rgb(255, 205, 112);
 	border-radius: 15px;
+	max-height: 100%;
 }
 
 .marco {
