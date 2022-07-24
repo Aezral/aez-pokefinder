@@ -17,7 +17,7 @@
 			</form>
 			<transition>
 				<div v-if="data" class="pokemon">
-					<div class="mt-5" style="padding: 50px">
+					<div class="mt-5" style="padding: 50px 50px 50px 50px">
 						<div
 							class="marco mx-auto d-flex justify-content-center align-items-center"
 						>
@@ -48,7 +48,7 @@
 										<div class="col">
 											<div class="w-50 mx-auto">
 												<div class="mt-2">
-													<b>Vida: {{ data.stats[0].base_stat }}</b>
+													<b>Hp: {{ data.stats[0].base_stat }}</b>
 												</div>
 												<MDBProgress class="w-100">
 													<MDBProgressBar
@@ -62,7 +62,7 @@
 									<div class="row mt-3">
 										<div class="col">
 											<div class="mt-2">
-												<b>Ataque: {{ data.stats[1].base_stat }}</b>
+												<b>Atk: {{ data.stats[1].base_stat }}</b>
 											</div>
 											<MDBProgress class="w-100">
 												<MDBProgressBar
@@ -73,7 +73,7 @@
 										</div>
 										<div class="col">
 											<div class="mt-2">
-												<b>Defensa: {{ data.stats[2].base_stat }}</b>
+												<b>Def: {{ data.stats[2].base_stat }}</b>
 											</div>
 											<MDBProgress class="w-100">
 												<MDBProgressBar
@@ -86,7 +86,7 @@
 									<div class="row mt-4">
 										<div class="col">
 											<div class="mt-2">
-												<b>Ataque Especial: {{ data.stats[3].base_stat }}</b>
+												<b>Atk Esp: {{ data.stats[3].base_stat }}</b>
 											</div>
 											<MDBProgress class="w-100">
 												<MDBProgressBar
@@ -97,7 +97,7 @@
 										</div>
 										<div class="col">
 											<div class="mt-2">
-												<b>Defensa especial: {{ data.stats[4].base_stat }}</b>
+												<b>Def Esp: {{ data.stats[4].base_stat }}</b>
 											</div>
 											<MDBProgress class="w-100">
 												<MDBProgressBar
@@ -223,13 +223,19 @@ body {
 .main {
 	background: white;
 	border-radius: 15px;
-	min-height: 70vh;
-	padding: 50px;
-	width: 600px;
+
+	padding: 50px 20px 50px 20px;
+	max-width: 90vw;
 }
 
-.header{
-	max-width:600px
+@media (min-width: 700) {
+	.main {
+		max-width: 800px;
+	}
+}
+
+.header {
+	max-width: 600px;
 }
 .v-enter-active,
 .v-leave-active {
